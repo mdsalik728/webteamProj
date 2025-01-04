@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "convert-json-schema-to-mongoose": "^0.3.2",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "generate-schema": "^2.6.0",
+    "method-override": "^3.0.0",
+    "mo": "^1.7.3",
+    "mongoose": "^8.9.3",
+    "path": "^0.12.7"
+  },
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

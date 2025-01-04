@@ -1,0 +1,42 @@
+{
+  "events": [
+    {
+      "eventName": "Annual Tech Fest",
+      "date": "2024-02-15",
+      "time": "10:00 AM",
+      "location": {
+        "building": "Main Auditorium",
+        "room": "101",
+        "address": {
+          "street": "123 Tech Park",
+          "city": "Techville",
+          "zip": "56789"
+        }
+      },
+      "organizer": {
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "phone": "123-456-7890"
+      }
+    },
+    {
+      "eventName": "Hackathon 2024",
+      "date": "2024-03-20",
+      "time": "9:00 AM",
+      "location": {
+        "building": "Innovation Hub",
+        "room": "202",
+        "address": {
+          "street": "456 Startup Lane",
+          "city": "Innovatia",
+          "zip": "67890"
+        }
+      },
+      "organizer": {
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "phone": "987-654-3210"
+      }
+    }
+  ]
+}

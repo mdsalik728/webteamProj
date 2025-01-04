@@ -1,0 +1,58 @@
+
+<%layout("../layout/boilerplate.ejs")%>
+<body>
+    <h1>Events</h1>
+    <table >
+        <tr>
+            <th rowspan="2">EventName</th>
+            <th rowspan="2"> date</th>
+            <th rowspan="2">time</th>
+            <th colspan="5" >location</th>
+            <th colspan="3" >Organizer</th>
+            
+           
+        </tr>
+        <tr>
+            <th>Room</th>
+            <th>Building</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>zip code</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        <% for(listing of listings){ %>
+        <tr>
+            <td><%= listing.eventName%></td>
+            <td><%= listing.date%></td>
+            <td><%= listing.time%></td>
+            <td><%= listing.location.room%></td>
+            <td><%= listing.location.building%></td>
+           
+            <td><%= listing.location.address.street%> 
+               </td>
+                
+            <td><%= listing.location.address.city%> </td>
+            <td><%= listing.location.address.zip%></td>
+            <td><%= listing.organizer.name%></td>
+            <td><%= listing.organizer.email%></td>
+            <td><%= listing.organizer.phone%></td>
+            <td>
+                <form action="events/<%=listing.id%>/edit" method="get"><button class="btn btn-dark mb-2 add-btn">&nbsp;Edit &nbsp;</button></form></td>
+            <td><form action="/delete/<%=listing.id%>" method="get"><button class="btn btn-dark mb-2 add-btn">&nbsp; delete &nbsp;</button></form></td>
+            
+
+            
+
+
+            
+
+        </tr>
+        <% } %>
+        
+    </table>
+    <br>
+    <form action="/add" method="get"> <button class="btn btn-dark mb-2 add-btn">Add new Event</button></form>
+    
+</body>

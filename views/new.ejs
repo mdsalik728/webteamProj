@@ -1,0 +1,54 @@
+
+<%layout("../layout/boilerplate.ejs")%>
+<body>
+    <h2>Add New Event</h2>
+    <form action="/add" method="post">
+        <div class="mb-3">
+            <label for="eventName">Event Name: </label>
+            <input name="listing[eventName]" id="eventName" placeholder="Enter Event Name">
+        </div>
+        <div class="mb-3">
+            <label for="date">Date:</label>
+            <input type="text" name="listing[date]" id="date" placeholder="Enter date">
+        </div>
+        <div class="mb-3">
+            <label for="time">Time :</label>
+            <input type="text" name="listing[time]" id="time" placeholder="Enter time" >
+        </div>
+        <div class="mb-3">
+            <label >Location: </label>
+        
+            <div class="mb-3"><label for="room">Room :</label>
+                <input type="text" name="listing[location.room]" id="room" placeholder="Enter room No.">
+            </div>
+            <div class="mb-3">
+                <label for="building">Building</label>
+                <input type="text" name="listing[location.building]" id="building" placeholder="Enter Building">
+            </div>
+            <div class="mb-3">
+                <label for="street">Street</label>
+                <input type="text" name="listing[location.address.street]" id="street" placeholder="Enter Street Address">
+            </div>
+            <div class="mb-3">
+                <label for="city">City</label>
+                <input type="text" name="listing[location.address.city]" id="city" placeholder="Enter City" >
+            </div>
+        <div class="mb-3">
+            <label for="zip">Zip</label>
+            <input type="text" name="listing[location.address.zip]" id="zip" placeholder="Enter zip code" >
+         </div>
+    </div>
+    <div class="mb-3">
+        <label for="">Organizer:</label> &nbsp;
+        <label for="name">name</label>
+        <input type="text" name="listing[organizer.name]" placeholder="Enter Organizer's name" id="name">
+        <label for="email">Email</label>
+        <input type="text" name="listing[organizer.email]" id="email" placeholder="Enter Email">
+        <label for="phone">Phone</label>
+        <input type="text" name="listing[organizer.phone]" id="phone" placeholder="Enter Phone">
+    </div>
+
+  
+        <button class="btn btn-dark mb-2 add-btn">Add</button>
+    
+</body>

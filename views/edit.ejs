@@ -1,0 +1,55 @@
+
+<%layout("../layout/boilerplate.ejs")%>
+<body>
+
+    <div class="mb-3">
+    <form action="/events/update/<%=listing.id%>" method="post">
+        <h4>Editing  for :<%=listing.eventName%> </h4>
+        <div class="mb-3">
+        <label for="eventName">Event Name</label>
+            <input name="listing[eventName]" id="eventName" value="<%=listing.eventName%>">
+    </div>
+
+        <div class="mb-3">
+        <label for="date">Date</label>
+        <input type="text" name="listing[date]" id="" placeholder="<%=listing.date%>" value="<%=listing.date%>">
+        </div>
+
+        <div class="mb-3">
+        <label for="time">time</label>
+        <input type="text" name="listing[time]" id="" placeholder="<%=listing.time%>" value="<%=listing.time%>">
+    </div>
+    <div class="mb-3">
+        <label >Location: </label>
+        
+        <label for="room">Room</label>
+        <input type="text" name="listing[location.room]" id="room" value="<%=listing.location.room%>" >
+        
+        <label for="building">building</label>
+        <input type="text" name="listing[location.building]" id="building" value="<%=listing.location.building%>" >
+        <label for="street">Street</label>
+        <input type="text" name="listing[location.address.street]" id="street" value="<%=listing.location.address.street%>" >
+        <br>
+       &nbsp;&nbsp;&nbsp; <label for="city">City</label>
+        <input type="text" name="listing[location.address.city]" id="city" value="<%=listing.location.address.city%>"  >
+        <label for="zip">Zip</label>
+        <input type="text" name="listing[location.address.zip]" id="zip" value="<%=listing.location.address.zip%>" >
+    </div>
+    <div class="m-3">
+        <label for="">Organizer:</label> &nbsp;
+        <label for="name">name</label>
+        <input type="text" name="listing[organizer.name]" value="<%=listing.organizer.name%>">
+        <label for="name">Email</label>
+        <input type="text" name="listing[organizer.email]" value="<%=listing.organizer.email%>">
+        <label for="name">Phone</label>
+        <input type="text" name="listing[organizer.phone]" value="<%=listing.organizer.phone%>">
+
+    </div>
+  
+        <button class="btn btn-dark mb-2 add-btn">done</button>
+    </form>
+    
+</div>
+
+    
+</body>
